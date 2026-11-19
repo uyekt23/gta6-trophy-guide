@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: cited guides, a platinum roadmap, missable flags, filters, a spoiler setting, and progress saved in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23ff4d8d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%232ee6c8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <p class="brand-mark">LEONIDA LEGEND</p>
+    <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+    <p class="brand-sub">All 55 official PS5 trophies — 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden — each with a guide in our own words that cites its source.</p>
+  </div>
+  <div class="progress-panel">
+    <p id="progress-count" class="progress-count">0 of 55 earned</p>
+    <div class="bar bar-overall"><div id="progress-fill" class="bar-fill"></div></div>
+    <p id="progress-pct" class="progress-pct">0% of the platinum</p>
+    <div id="kind-bars" class="kind-bars"></div>
+  </div>
+</header>
+
+<nav id="view-tabs" aria-label="Guide views">
+  <button type="button" class="tab is-active" data-view="checklist">Checklist &amp; guides</button>
+  <button type="button" class="tab" data-view="roadmap">Platinum roadmap</button>
+  <button type="button" class="tab" data-view="missables">Missables (17)</button>
+</nav>
+
+<section id="controls" aria-label="Tracker controls">
+  <label class="control control-search">Search
+    <input id="search" type="search" placeholder="Search by trophy name…" autocomplete="off">
+  </label>
+  <div id="kind-chips" class="chips" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip is-active" data-kind="all">All kinds</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="online">Online</button>
+    <button type="button" class="chip" data-kind="platinum">Platinum</button>
+  </div>
+  <label class="control">Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="control">State
+    <select id="state-filter">
+      <option value="all">Earned &amp; unearned</option>
+      <option value="earned">Earned only</option>
+      <option value="unearned">Unearned only</option>
+    </select>
+  </label>
+  <label class="control control-toggle">
+    <input id="spoiler-toggle" type="checkbox" checked>
+    Spoiler shield: hide hidden &amp; story trophies until earned
+  </label>
+  <div class="control-buttons">
+    <button id="export-btn" type="button">Export progress</button>
+    <label class="button-like">Import progress <input id="import-input" type="file" accept="application/json,.json"></label>
+    <button id="reset-btn" type="button">Reset</button>
+  </div>
+  <p id="online-note" class="online-note" hidden>The official 55-trophy list contains no online trophies — every trophy here can be earned in the single-player game as listed.</p>
+  <p id="result-count" class="result-count"></p>
+</section>
+
+<main>
+  <section id="view-checklist">
+    <div class="layout">
+      <div id="grid" class="grid" aria-live="polite"></div>
+      <aside id="detail" class="detail" aria-label="Trophy guide detail"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <h2 class="view-title">Roadmap to the platinum</h2>
+    <p class="view-lede">Six stages, built from the official descriptions: story first in spoiler-safe wording, then the people of Leonida, then the collectible sweep, then activities, then free-roam feats and money, and finally the last percent. Estimated counts are the counts PlayStation itself publishes for each trophy.</p>
+    <div id="roadmap-list" class="roadmap-list"></div>
+  </section>
+
+  <section id="view-missables" hidden>
+    <h2 class="view-title">Missable trophies — do not leave these behind</h2>
+    <p class="view-lede">17 trophies are flagged missable, each derived from its official description: character-arc finales ('complete the FINAL mission for…'), stranger strands that must be finished, partner-only feats, one-place opportunities, and choice or one-off moments. Each card states its point of no return as far as the description supports it.</p>
+    <div id="missable-list" class="missable-list"></div>
+  </section>
+</main>
+
+<footer id="sources-footer">
+  <h2>Sources &amp; honesty</h2>
+  <p id="sources-text">Trophy names, descriptions and grades: the official PlayStation 5 list, as listed identically by Exophase and PSNProfiles and carried in this app's data file (data/trophies.json). Counts such as 42 Shooting Range challenges, 14 Top Fun locations, 52 areas of Leonida and 9 gangs come from the same official list data. Every guide is written for this entry in our own words, derived from the official description quoted in its Basis line. Where a description is a riddle or a joke — Challenging Tank, Personal Best, Bad Luck I Guess, The Truth Is Out There — the guide says so plainly and claims no location or mechanic no source gives. No Rockstar Games logo, artwork or game screenshot is used anywhere in this app; the look is original. This app works fully offline and makes no network requests.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
